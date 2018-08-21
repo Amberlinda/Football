@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <!-- This is the parent layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <!--This is the design for team A-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TeamA_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:text="Team A"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/under_text"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="70dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/under_text"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/team_a_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#9162e4"
+                        android:textSize="56sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/team_a_foul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#280680"
+                        android:textSize="36sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="#9162e4"
+                        android:text="Goals :"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:background="#9162e4"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:onClick="scoreteama"
+                        android:text="+1"
+                        android:textColor="#f9f9f9"/>
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="-1"
+                        android:textColor="#f9f9f9"
+                        android:onClick="scoreteam_a_"
+                        android:background="#9162e4"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="#280680"
+                        android:text="Fouls :"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="+1"
+                        android:background="#280680"
+                        android:textColor="#f9f9f9"
+                        android:onClick="foul_team_a"/>
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="-1"
+                        android:textColor="#f9f9f9"
+                        android:background="#280680"
+                        android:onClick="foul_team_a_"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="46dp"
+            android:background="@color/colorPrimaryDark" />
+        <!-- From here the design of Team b starts -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/TeamB_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingTop="8dp"
+                android:text="Team B"
+                android:textColor="#000000"/>
+
+            <TextView
+                android:id="@+id/underT_text"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="70dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/team_b_score"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#9162e4"
+                        android:textSize="56sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="/"
+                        android:textSize="36sp" />
+
+                    <TextView
+                        android:id="@+id/team_b_foul"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#280680"
+                        android:textSize="36sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:textColor="#9162e4"
+                        android:text="Goals :"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:onClick="scoreteamb"
+                        android:text="+1"
+                        android:textColor="#f9f9f9"
+                        android:background="#9162e4"/>
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="-1"
+                        android:textColor="#f9f9f9"
+                        android:background="#9162e4"
+                        android:onClick="scoreteam_b_"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+
+                        android:text="Fouls :"
+                        android:textSize="14sp" />
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="8dp"
+                        android:text="+1"
+                        android:textColor="#f9f9f9"
+                        android:background="#280680"
+                        android:onClick="foul_team_b"/>
+
+                    <Button
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:text="-1"
+                        android:textColor="#f9f9f9"
+                        android:background="#280680"
+                        android:onClick="foul_team_b_"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:text="reset"
+        android:onClick="reset"
+        android:background="#5e35b1"
+        android:textColor="#f9f9f9"/>
+</RelativeLayout>
